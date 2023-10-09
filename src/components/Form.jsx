@@ -31,6 +31,7 @@ function Form() {
 
   useEffect(
     function () {
+      if (!lat && !lng) return;
       async function fetchCityData() {
         try {
           setIsLoadingGeo(true);
@@ -59,6 +60,8 @@ function Form() {
     [lat, lng]
   );
 
+  if (!lat && lng)
+    return <Message message='start by clicking somewhere on the map' />;
   if (isLoadingGeo) return <Spinner />;
   if (geoError) return <Message message={geoError} />;
 
