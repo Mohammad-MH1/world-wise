@@ -37,28 +37,16 @@
       "id": 11111
     },
     {
-      "cityName": "Township of Rovohl",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2023-10-09T17:39:56.980Z",
+      "cityName": "Kocasinan",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-10-10T09:00:37.027Z",
       "notes": "",
       "position": {
-        "lat": "39.50404070558415",
-        "lng": "-101.16210937500001"
+        "lat": "39.01064750994083",
+        "lng": "35.09033203125001"
       },
-      "id": 98443201
-    },
-    {
-      "cityName": "Gaines",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2023-10-09T17:53:51.324Z",
-      "notes": "",
-      "position": {
-        "lat": "42.89206418807337",
-        "lng": "-83.86962890625001"
-      },
-      "id": 98443203
+      "id": 98443198
     }
   ]
 }
