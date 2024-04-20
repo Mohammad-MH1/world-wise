@@ -20,6 +20,7 @@ function reducer(state, action) {
   }
 }
 
+// we have only one fake user at this point, this should match the credentials in login page
 const FAKE_USER = {
   name: 'Mohammad',
   email: 'm@example.com',
@@ -27,6 +28,7 @@ const FAKE_USER = {
   avatar: 'https://i.pravatar.cc/100?u=zz',
 };
 
+// isAuthenticated is used at ProtectedRoute component to make sure the person is logged in before going to the appLayout
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,

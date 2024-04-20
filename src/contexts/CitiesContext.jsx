@@ -6,6 +6,7 @@ import {
   useCallback,
 } from 'react';
 
+// url of our fake API, which has our cities list
 const BASE_URL = 'http://localhost:9000';
 
 const CitiesContext = createContext();
@@ -17,6 +18,7 @@ const initialState = {
   error: '',
 };
 
+// Because the logic of implementing the CRUD for API was the same , i used this reducer to keep all the State logics in one place
 function reducer(state, action) {
   switch (action.type) {
     case 'loading':
@@ -61,6 +63,7 @@ function reducer(state, action) {
   }
 }
 
+// this provider is used at top of all the components, so we can share our cities data easily , in every component we need (global states)
 function CitiesProvider({ children }) {
   // const [cities, setCities] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);

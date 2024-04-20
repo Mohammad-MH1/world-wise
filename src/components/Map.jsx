@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   MapContainer,
   Marker,
@@ -76,12 +76,14 @@ function Map() {
   );
 }
 
+// this two custom components are created to add functionality to our map
 function ChangeCenter({ position }) {
   const map = useMap();
   map.setView(position);
   return null;
 }
 
+// when we click somewhere in the map, the will change the url according to our new location and give us new lat and lng
 function DetectClick() {
   const navigate = useNavigate();
 

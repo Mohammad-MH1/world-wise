@@ -11,6 +11,7 @@ import City from './components/City';
 import Form from './components/Form';
 import SpinnerFullPage from './components/SpinnerFullPage';
 
+// this is for production purposes, that app can run more faster
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Product = lazy(() => import('./pages/Product'));
 const Pricing = lazy(() => import('./pages/Pricing'));
@@ -18,6 +19,7 @@ const Login = lazy(() => import('./pages/Login'));
 const AppLayout = lazy(() => import('./pages/AppLayout'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
+// all the routing is gathered in this component , so we can manage our url path easily
 function App() {
   return (
     <AuthProvider>

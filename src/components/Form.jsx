@@ -21,6 +21,7 @@ export function convertToEmoji(countryCode) {
   return String.fromCodePoint(...codePoints);
 }
 
+// this api will do the reverse geocoding for us, and we should include  lat and lng that we get from the url , when we are requesting
 const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client';
 
 function Form() {
@@ -46,6 +47,7 @@ function Form() {
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await res.json();
+          // if we click on an unknown place in the map (for example : middle of the sea) , we get this error
           if (!data.countryCode)
             throw new Error(
               `That doesn't seem to be a city. Click somewhere else`
@@ -83,6 +85,7 @@ function Form() {
     navigate('/app');
   }
 
+  // if we doesn't have a city list yet, this message will appear
   if (!lat && lng)
     return <Message message='start by clicking somewhere on the map' />;
   if (isLoadingGeo) return <Spinner />;
